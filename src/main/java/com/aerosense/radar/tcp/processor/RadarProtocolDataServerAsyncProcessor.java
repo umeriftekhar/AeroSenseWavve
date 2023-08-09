@@ -100,7 +100,7 @@ public class RadarProtocolDataServerAsyncProcessor extends AsyncUserProcessor<Ra
                 radarProtocolData.setRadarVersion(version);
             }
         } else {
-            //绑定数据
+            //bind data
             if (StringUtils.isEmpty(ConnectionUtil.getRadarId(bizContext.getConnection()))) {
                 return false;
             }
