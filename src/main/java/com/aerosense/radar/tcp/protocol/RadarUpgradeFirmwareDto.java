@@ -5,18 +5,18 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 雷达固件升级dto
+ * radar firmware upgrade dto
  * @author jia.wu
  */
 
 public class RadarUpgradeFirmwareDto implements Serializable {
     private static final long serialVersionUID = 1L;
     /**
-     * 雷达id
+     * radar id
      */
     private List<String> radarIds;
     /**
-     * 固件二进制数据
+     * firmware binary data
      */
     private byte[] firmwareData;
 
