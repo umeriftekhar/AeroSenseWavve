@@ -80,7 +80,7 @@ public class RadarSerializer implements Serializer {
         return (T)radarProtocolData;
     }
     /**
-     * 大端序解析2字节为short
+     * big endian 2 bytes as short
      * @param b1
      * @param b2
      * @return
