@@ -19,16 +19,16 @@ import java.util.Arrays;
 public class RadarProtocolData implements Serializable {
     /** For serialization  */
     private static final long serialVersionUID = 1;
-    /**协议数据固定长度：function：1， radarId：12，radarVersion：8*/
+    /**protocol data fixed length：function：1， radarId：12，radarVersion：8*/
     public static final int DATA_FIX_LEN = 15;
 
-    /**函数接口*/
+    /**interface function*/
     private FunctionEnum    function;
-    /**雷达id*/
+    /**radar id*/
     private String          radarId;
-    /**雷达版本号*/
+    /**radar version*/
     private String          radarVersion;
-    /**雷达上报数据*/
+    /**radar data*/
     private byte[]          data = new byte[4];
 
     public FunctionEnum getFunction() {
@@ -70,7 +70,7 @@ public class RadarProtocolData implements Serializable {
         return new RadarProtocolData();
     }
     /**
-     * 填充function
+     * fill function
      * @param id
      * @param function
      * @param data
@@ -84,7 +84,7 @@ public class RadarProtocolData implements Serializable {
     }
 
     /**
-     * 创建一下新的指定function实例
+     * create a new instance of the specified function
      * @return
      */
     public static final RadarProtocolData newFunctionInstance(FunctionEnum function, byte[] data){
@@ -105,7 +105,7 @@ public class RadarProtocolData implements Serializable {
     }
 //
 //    /**
-//     * 转化为之前http协议传输的数据格式字节数组
+//     * convert to the data format byte array transmitted by the previous HTTP protocol
 //     * @return
 //     */
 //    public byte[] toBytes(){
