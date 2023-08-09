@@ -12,7 +12,7 @@ import com.alipay.remoting.ProtocolManager;
  */
 public class RadarProtocolManager {
     /**
-     * 初始化雷达协议
+     * initialize radar protocol
      */
     public static void initProtocols() {
         ProtocolManager.registerProtocol(new RadarProtocol(), RadarProtocol.PROTOCOL_CODE);
