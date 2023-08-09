@@ -36,7 +36,7 @@ public class SetRadarParams extends AbstractToRadarProtocolDataHandler {
         try {
             return doSet(getRadarParamVo);
         } catch (Exception e) {
-            //可能超时
+            //set timeout
             for (int i = 0; i < 5; i++) {
                 try {
                     return doSet(getRadarParamVo);
