@@ -41,7 +41,7 @@ public class RadarUpgradeFirmwareProcessor extends SyncUserProcessor<RadarUpgrad
             }
             byte[][] firmwareData = splitAndCrc16(dto.getFirmwareData(), BLOCK_SIZE);
             int length = dto.getFirmwareData().length;
-            //返回升级成功的雷达id列表
+            //returns a list of radar ids that have been successfully upgraded
             List<String> radarIds = dto.getRadarIds().stream()
                     .map(radarId -> doUpgrade(radarId, length, firmwareData))
                     .filter(Objects::nonNull)
